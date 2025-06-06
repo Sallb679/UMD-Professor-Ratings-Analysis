@@ -1,43 +1,38 @@
 # PlanetTerp Professor Reviews Analysis
 
-This project builds a data pipeline and machine learning models to analyze and predict professor ratings using PlanetTerp review and grade data.
+This project implements a full data pipeline and machine learning workflow analyzing professor ratings from PlanetTerp review and grade data.
 
-## Overview
+## Project Structure
 
-The analysis is structured into three main stages:
+The workflow is divided into three main files, each representing a stage in the pipeline:
 
-1. **Data Extraction & Cleaning**  
-   - Extract raw review data via API and clean it (remove duplicates, fill missing values).  
-   - Clean and preprocess text reviews, map expected grades to numeric scores, and generate review-level features such as word and character counts.
+1. **Data Extraction**  
+   - Extract raw review data from the PlanetTerp API.  
+   - Collect and consolidate initial review datasets for further processing.
 
-2. **Feature Aggregation & Sentiment Analysis**  
-   - Aggregate review and grade data at the professor level, computing averages and totals for various metrics.  
-   - Use VADER sentiment analysis to extract sentiment scores from cleaned review texts and merge these into the feature set.
+2. **Data Cleaning & Feature Engineering**  
+   - Clean and preprocess review text and grade data.  
+   - Handle duplicates, missing values, and map categorical grades to numeric scores.  
+   - Generate aggregated professor-level features such as average grades, review counts, and text statistics.
 
-3. **Machine Learning Modeling**  
-   - Train and evaluate multiple regression models (KNN, Random Forest, XGBoost) using optimized hyperparameters.  
-   - Models predict professor ratings based on aggregated features and sentiment scores, with evaluation via RMSE and R² metrics.
+3. **Final Features, Modeling & Prediction**  
+   - Apply sentiment analysis on reviews to extract sentiment scores using VADER.  
+   - Combine all features into a final dataset.  
+   - Train and evaluate machine learning models (KNN, Random Forest, XGBoost) to predict professor ratings.
 
-## Results
+## Highlights
 
-- The XGBoost model achieved the best performance, balancing error and explained variance.  
-- Sentiment analysis improved feature richness by capturing qualitative review insights.  
+- Sentiment analysis adds a qualitative dimension to numeric features.  
+- Models achieve strong predictive performance, with XGBoost performing best.  
+- The pipeline showcases end-to-end data science workflow from raw data to actionable insights.
 
-## Technologies & Libraries
+## Technologies Used
 
-- Python 3  
-- pandas, numpy  
-- scikit-learn, xgboost  
-- nltk (VADER sentiment)  
-- tqdm for progress bars  
-
-## How to Use
-
-- Run the data extraction and cleaning notebook first to prepare the dataset.  
-- Next, run the sentiment analysis notebook to score reviews and generate sentiment features.  
-- Finally, run the modeling notebook to train and evaluate regression models.  
+- Python 3 with pandas, numpy for data processing  
+- scikit-learn and xgboost for modeling  
+- nltk’s VADER for sentiment analysis  
+- tqdm for progress monitoring
 
 ---
 
-This project demonstrates a full end-to-end workflow from raw data extraction to predictive modeling, highlighting the importance of feature engineering and text analysis in educational data contexts.
-
+This project demonstrates how to build a robust data pipeline and apply machine learning techniques to educational review data, providing valuable insights into professor performance.
