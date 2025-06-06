@@ -1,6 +1,6 @@
 # PlanetTerp Professor Reviews Analysis
 
-This project implements a full data pipeline and machine learning workflow analyzing professor ratings from PlanetTerp review and grade data.
+This project implements a mini data pipeline and machine learning workflow analyzing professor ratings from PlanetTerp review and grade data.
 
 ## Project Structure
 
@@ -35,4 +35,4 @@ The workflow is divided into three main files, each representing a stage in the 
 
 ---
 
-This project demonstrates how to build a robust data pipeline and apply machine learning techniques to educational review data, providing valuable insights into professor performance.
+This project demonstrates how to build a robust data flow and apply machine learning techniques to professor review data, providing valuable insights into professor performance.
